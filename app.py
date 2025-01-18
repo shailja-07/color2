@@ -81,4 +81,4 @@ def process_image(image_bytes):
 async def detect_nail_color(file: UploadFile = File(...)):
     image_bytes = await file.read()
     color_name = process_image(image_bytes)
-    return JSONResponse(content={"color_name": color_name})
+    return JSONResponse(content={"color_name":color_name})
